@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ja" data-lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b1020" />
+
+    <title>ClipStack</title>
+    <meta
+      name="description"
+      content="Windows 11 の Win+V（Clipboard history）に近い体験を macOS で。⌘⇧Vで呼び出し、Enter/クリックで貼り付け。ピン留めでよく使う内容を固定できます。"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ClipStack — macOS版 Win+V クリップボード履歴" />
+    <meta
+      property="og:description"
+      content="⌘⇧Vで呼び出し。↑↓で選択、Enter/クリックで貼り付け。テキスト/画像/ファイル/URL対応。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/icon.svg" />
+
+    <meta property="og:url" content="https://natuki53.github.io/ClipStack/" />
+
+    <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script defer src="./assets/app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#content">本文へスキップ</a>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="./">
+          <img class="brand__mark" src="./assets/icon.svg" alt="" width="28" height="28" />
+          <span class="brand__name">ClipStack</span>
+        </a>
+
+        <nav class="nav">
+          <a class="nav__link" href="#features" data-i18n="nav.features">機能</a>
+          <a class="nav__link" href="#how" data-i18n="nav.how">使い方</a>
+          <a class="nav__link" href="#permissions" data-i18n="nav.permissions">権限</a>
+          <a class="nav__link" href="#download" data-i18n="nav.download">入手</a>
+        </nav>
+
+        <div class="topbar__cta">
+          <div class="lang" role="group" aria-label="Language">
+            <button class="lang__btn" type="button" data-set-lang="ja">日本語</button>
+            <button class="lang__btn" type="button" data-set-lang="en">English</button>
+          </div>
+          <a class="button button--ghost" data-repo-link href="https://github.com/natuki53/ClipStack" rel="noreferrer noopener"
+            data-i18n="cta.github"
+            >GitHub</a
+          >
+          <a class="button button--primary" data-releases-link href="https://github.com/natuki53/ClipStack/releases" rel="noreferrer noopener"
+            data-i18n="cta.download"
+            >ダウンロード</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+
+            <h1 class="hero__title" data-i18n="hero.title">
+              Win+V の気持ちよさを、<br />
+              macOS に。
+            </h1>
+
+            <p class="hero__lead" data-i18n="hero.lead">
+              <strong>⌘⇧V</strong>で呼び出し、<strong>↑↓</strong>で選択、<strong>Enter/クリック</strong>で貼り付け。
+              “履歴を使う” 体験に寄せた、軽快なクリップボード履歴です。
+            </p>
+
+            <div class="hero__actions">
+              <a class="button button--primary button--lg" href="#download" data-i18n="hero.primary">今すぐ使う</a>
+            </div>
+
+            <div class="hero__meta">
+              <div class="meta">
+                <div class="meta__label" data-i18n="hero.meta.history.label">保存履歴数</div>
+                <div class="meta__value" data-i18n="hero.meta.history.value">最大100件</div>
+              </div>
+              <div class="meta">
+                <div class="meta__label" data-i18n="hero.meta.customize.label">カスタマイズ</div>
+                <div class="meta__value" data-i18n="hero.meta.customize.value">ショートカットキー / テーマ</div>
+              </div>
+              <div class="meta">
+                <div class="meta__label" data-i18n="hero.meta.language.label">対応言語</div>
+                <div class="meta__value" data-i18n="hero.meta.language.value">英語 / 日本語 / その他</div>
+              </div>
+              <div class="meta">
+                <div class="meta__label" data-i18n="hero.meta.version.label">対応バージョン</div>
+                <div class="meta__value" data-i18n="hero.meta.version.value">macOS 13 Ventura 以降</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="panel-mock">
+              <div class="panel-mock__chrome">
+                <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+                <span class="panel-mock__title">ClipStack</span>
+              </div>
+              <div class="panel-mock__body">
+                <div class="card card--active">
+                  <div class="card__badge">PIN</div>
+                  <div class="card__title" data-i18n="mock.pin.title">ピン留め</div>
+                  <div class="card__text" data-i18n="mock.pin.text">よく使う内容を固定して、いつでもすぐ使えます。</div>
+                </div>
+                <div class="card">
+                  <div class="card__badge">TXT</div>
+                  <div class="card__title" data-i18n="mock.history.title">履歴</div>
+                  <div class="card__text" data-i18n="mock.history.text">コピーするだけで自動で積み上がります。</div>
+                </div>
+                <div class="card">
+                  <div class="card__badge">IMG</div>
+                  <div class="card__title" data-i18n="mock.image.title">画像</div>
+                  <div class="card__text" data-i18n="mock.image.text">スクショも履歴化。必要なときに即貼り付け。</div>
+                </div>
+                <div class="card">
+                  <div class="card__badge">FIL</div>
+                  <div class="card__title" data-i18n="mock.link.title">ファイル</div>
+                  <div class="card__text" data-i18n="mock.link.text">様々な種類のファイルもまとめて扱えます。</div>
+                </div>
+              </div>
+              <div class="panel-mock__hint">※ 画像はイメージです</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__bg" aria-hidden="true"></div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <h2 class="section__title" data-i18n="features.title">機能</h2>
+          <p class="section__lead" data-i18n="features.lead">Windows準拠の操作感をベースに、macOSの“馴染み”も崩さない設計。</p>
+
+          <div class="grid grid--3">
+            <div class="feature">
+              <div class="feature__icon">⌘⇧V</div>
+              <div class="feature__title" data-i18n="features.items.invoke.title">ワンアクションで呼び出し</div>
+              <div class="feature__text" data-i18n="features.items.invoke.text">グローバルホットキーで表示/非表示をトグル。</div>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">↑↓</div>
+              <div class="feature__title" data-i18n="features.items.keyboard.title">キーボード最適化</div>
+              <div class="feature__text" data-i18n="features.items.keyboard.text">↑↓ / PageUp / PageDown で高速に選択。</div>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">⏎</div>
+              <div class="feature__title" data-i18n="features.items.paste.title">貼り付けが速い</div>
+              <div class="feature__text" data-i18n="features.items.paste.text">Enter または単クリックで即ペースト（既定）。</div>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">PIN</div>
+              <div class="feature__title" data-i18n="features.items.pin.title">ピン留め</div>
+              <div class="feature__text" data-i18n="features.items.pin.text">右端のピンマークで固定。クリアしても残ります。</div>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">⎋</div>
+              <div class="feature__title" data-i18n="features.items.close.title">邪魔しない</div>
+              <div class="feature__text" data-i18n="features.items.close.text">ESC / 外クリック / フォーカス喪失で自然に閉じます。</div>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">TXT</div>
+              <div class="feature__title" data-i18n="features.items.types.title">複数タイプ対応</div>
+              <div class="feature__text" data-i18n="features.items.types.text">Text / Image / File / URL を履歴化。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="section section--alt">
+        <div class="container">
+          <h2 class="section__title" data-i18n="how.title">使い方</h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step__num">01</div>
+              <div class="step__body">
+                <div class="step__title" data-i18n="how.steps.1.title">呼び出す</div>
+                <p class="step__text" data-i18n="how.steps.1.text">ショートカットキー <strong>⌘⇧V</strong>。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">02</div>
+              <div class="step__body">
+                <div class="step__title" data-i18n="how.steps.2.title">選ぶ</div>
+                <p class="step__text" data-i18n="how.steps.2.text"><strong>↑↓</strong>（PageUp/PageDownもOK）で履歴を選択。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">03</div>
+              <div class="step__body">
+                <div class="step__title" data-i18n="how.steps.3.title">貼り付ける</div>
+                <p class="step__text" data-i18n="how.steps.3.text"><strong>Enter</strong> または <strong>単クリック</strong>で貼り付け。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">04</div>
+              <div class="step__body">
+                <div class="step__title" data-i18n="how.steps.4.title">固定する</div>
+                <p class="step__text" data-i18n="how.steps.4.text">右端の <strong>ピンマーク</strong> でピン留め。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout">
+            <div class="callout__title" data-i18n="how.install.title">インストール（一般ユーザー向け）</div>
+            <ol class="list list--ordered">
+              <li data-i18n="how.install.1"><strong>ダウンロード</strong>（Releases から）</li>
+              <li data-i18n="how.install.2">アプリを <strong>アプリケーション</strong> フォルダへ移動</li>
+              <li data-i18n="how.install.3">起動して、案内に沿って必要な権限を付与</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="permissions" class="section">
+        <div class="container">
+          <h2 class="section__title" data-i18n="perm.title">アクセシビリティ権限について</h2>
+          <p class="section__lead" data-i18n="perm.lead">
+            選んだ履歴を <strong>自動で貼り付け</strong> するために、アクセシビリティの許可が必要です。
+          </p>
+
+          <div class="grid grid--2">
+            <div class="card2">
+              <div class="card2__title" data-i18n="perm.ok.title">許可がある場合</div>
+              <ul class="list">
+                <li data-i18n="perm.ok.1">ホットキー（⌘⇧V）で呼び出し</li>
+                <li data-i18n="perm.ok.2">↑↓で選択、Enter/クリックで貼り付け</li>
+            </div>
+            <div class="card2 card2--muted">
+              <div class="card2__title" data-i18n="perm.ng.title">許可がない場合</div>
+              <ul class="list">
+                <li data-i18n="perm.ng.1">画面内メニューで手順を案内します</li>
+                <li data-i18n="perm.ng.2">手順に従って許可を行ってください</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout">
+            <div class="callout__title" data-i18n="perm.steps.title">許可手順</div>
+            <ol class="list list--ordered">
+              <li data-i18n="perm.steps.1"><strong>システム設定</strong> → <strong>プライバシーとセキュリティ</strong> → <strong>アクセシビリティ</strong></li>
+              <li data-i18n="perm.steps.2"><strong>ClipStack</strong> を許可</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="download" class="section section--alt">
+        <div class="container">
+          <h2 class="section__title" data-i18n="dl.title">入手</h2>
+          <p class="section__lead" data-i18n="dl.lead">まずは Releases からダウンロードしてお試しください。</p>
+
+          <div class="download">
+            <a class="download__cta" data-releases-link href="https://github.com/natuki53/ClipStack/releases" rel="noreferrer noopener">
+              <div class="download__title" data-i18n="dl.releases.title">GitHub Releases</div>
+              <div class="download__text" data-i18n="dl.releases.text">最新の配布物をダウンロード</div>
+              <div class="download__hint" data-i18n="dl.releases.hint">DMG/ZIP など（配布が無い場合は後日追加）</div>
+            </a>
+            <a class="download__cta download__cta--ghost" data-repo-link href="https://github.com/natuki53/ClipStack" rel="noreferrer noopener">
+              <div class="download__title" data-i18n="dl.support.title">サポート / 要望</div>
+              <div class="download__text" data-i18n="dl.support.text">不具合報告・改善アイデアはこちら</div>
+              <div class="download__hint" data-i18n="dl.support.hint">GitHub（Issues/Discussions）</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="footer__brand">
+            <img src="./assets/icon.svg" alt="" width="18" height="18" />
+            <span>ClipStack</span>
+          </div>
+          <div class="footer__meta">© <span data-year></span> ClipStack</div>
+        </div>
+        <div class="footer__right">
+          <a class="footer__link" href="#content" data-i18n="footer.top">トップへ</a>
+          <a class="footer__link" data-repo-link href="https://github.com/natuki53/ClipStack" rel="noreferrer noopener" data-i18n="footer.github"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true" hidden data-toast></div>
+  </body>
+</html>
+
