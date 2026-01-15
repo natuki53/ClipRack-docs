@@ -1,4 +1,4 @@
-## ClipStack End User License Agreement (EULA)
+## ClipRack End User License Agreement (EULA)
 
 Please read this End User License Agreement (the “Agreement”) carefully before using the software (“Software”). By installing, copying, or using the Software, you agree to be bound by this Agreement.
 

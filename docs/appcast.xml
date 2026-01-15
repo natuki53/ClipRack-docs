@@ -5,9 +5,9 @@
   xmlns:dc="http://purl.org/dc/elements/1.1/"
 >
   <channel>
-    <title>ClipStack Updates</title>
-    <link>https://github.com/natuki/ClipStack</link>
-    <description>ClipStack の更新情報（Sparkle appcast）</description>
+    <title>ClipRack Updates</title>
+    <link>https://github.com/natuki/ClipRack</link>
+    <description>ClipRack の更新情報（Sparkle appcast）</description>
     <language>ja</language>
   </channel>
 </rss>

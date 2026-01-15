@@ -1,9 +1,9 @@
-# ClipStack
+# ClipRack
 
 macOS向けのクリップボード履歴アプリです。Windows 11 の **Win+V（Clipboard history）** のように、過去にコピーした内容を一覧から選んで貼り付けられます。
 
 このリポジトリは **ドキュメント公開用** です。公開ページは以下です。  
-https://natuki53.github.io/ClipStack-docs/
+https://natuki53.github.io/ClipRack-docs/
 
 ## 使い方
 - **表示/非表示**: グローバルホットキー（既定: **⌘⇧V**）

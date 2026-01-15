@@ -1,5 +1,5 @@
 (() => {
-  const STORAGE_KEY = "clipstack_lang";
+  const STORAGE_KEY = "cliprack_lang";
 
   /** @typedef {"ja"|"en"} Lang */
 
@@ -105,7 +105,7 @@
       "how.install.3": "Launch it and follow the permission prompts",
 
       "perm.title": "Accessibility permission",
-      "perm.lead": "To <strong>paste automatically</strong>, ClipStack needs Accessibility permission.",
+      "perm.lead": "To <strong>paste automatically</strong>, ClipRack needs Accessibility permission.",
       "perm.ok.title": "When allowed",
       "perm.ok.1": "Open with the hotkey (⌘⇧V)",
       "perm.ok.2": "Choose with ↑↓, paste with Enter/click",
@@ -114,7 +114,7 @@
       "perm.ng.2": "Follow the steps to grant permission",
       "perm.steps.title": "How to enable",
       "perm.steps.1": "<strong>System Settings</strong> → <strong>Privacy & Security</strong> → <strong>Accessibility</strong>",
-      "perm.steps.2": "Allow <strong>ClipStack</strong>",
+      "perm.steps.2": "Allow <strong>ClipRack</strong>",
 
       "dl.title": "Get it",
       "dl.lead": "Download the latest build from Releases.",
@@ -308,7 +308,7 @@
     });
 
     // Title
-    document.title = lang === "ja" ? "ClipStack" : "ClipStack";
+    document.title = lang === "ja" ? "ClipRack" : "ClipRack";
   }
 
   function wireLangToggle() {
