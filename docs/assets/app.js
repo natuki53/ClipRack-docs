@@ -117,7 +117,7 @@
       "perm.steps.2": "Allow <strong>ClipRack</strong>",
 
       "dl.title": "Get it",
-      "dl.lead": "Download the latest build from Releases.",
+      "dl.lead": "Download from App Store or TestFlight to try it out.",
       "dl.releases.title": "GitHub Releases",
       "dl.releases.text": "Download the latest build",
       "dl.releases.hint": "DMG/ZIP, etc. (If not available yet, it will be added later.)",
@@ -131,6 +131,51 @@
 
       "notfound.text": "Page not found. The link may be outdated.",
       "notfound.back": "Back to home",
+
+      "privacy.title": "Privacy Policy",
+      "privacy.lead": "Last updated: ",
+      "privacy.intro": "ClipRack (hereinafter referred to as \"this app\") respects user privacy. This privacy policy explains how this app collects, uses, and stores information.",
+      "privacy.important.title": "Key Points",
+      "privacy.important.1": "This app stores all data <strong>only on your local device</strong>",
+      "privacy.important.2": "Data is <strong>never</strong> sent to external servers",
+      "privacy.important.3": "Data is <strong>never</strong> shared with third parties",
+      "privacy.important.4": "No analytics or tracking tools are used",
+      "privacy.section1.title": "1. Information Collected",
+      "privacy.section1.text": "To provide clipboard history functionality, this app stores the following information on your local device:",
+      "privacy.section1.item1": "<strong>Clipboard Data</strong>: Clipboard contents such as text, images, file paths, URLs, etc.",
+      "privacy.section1.item2": "<strong>Application Settings</strong>: Shortcut keys, theme settings, and other user preferences",
+      "privacy.section1.item3": "<strong>Pinned Items</strong>: Clipboard items that users have pinned",
+      "privacy.section2.title": "2. Data Storage Location",
+      "privacy.section2.text": "All data is stored in macOS's standard application data directory (<code>~/Library/Application Support/ClipRack</code>). This data exists only on the user's device and is never sent externally.",
+      "privacy.section3.title": "3. Purpose of Data Use",
+      "privacy.section3.text": "Collected data is used only for the following purposes:",
+      "privacy.section3.item1": "Display and management of clipboard history",
+      "privacy.section3.item2": "Providing paste functionality for user-selected items",
+      "privacy.section3.item3": "Saving and restoring application settings",
+      "privacy.section3.item4": "Providing pin functionality",
+      "privacy.section4.title": "4. Data Sharing",
+      "privacy.section4.text": "This app does not share collected data with third parties. Data is stored only on the user's device and is never sent to external servers.",
+      "privacy.section5.title": "5. Required Permissions",
+      "privacy.section5.text": "This app requires the following macOS permissions:",
+      "privacy.section5.item1": "<strong>Accessibility Permission</strong>: Required to automatically paste selected clipboard items",
+      "privacy.section5.item2": "<strong>Clipboard Access</strong>: Required to read clipboard contents (standard macOS feature)",
+      "privacy.section5.note": "These permissions are used only to provide the core functionality of this app and are not used for any other purpose.",
+      "privacy.section6.title": "6. Data Deletion",
+      "privacy.section6.text": "Users can delete non-pinned clipboard history using the \"Clear All\" feature within the app. Uninstalling the app will delete all data from the device.",
+      "privacy.section7.title": "7. Security",
+      "privacy.section7.text": "This app protects user privacy by storing data only on the local device. While data is not encrypted, macOS's standard file system protection prevents access by other applications.",
+      "privacy.section8.title": "8. Age Restrictions",
+      "privacy.section8.text": "This app is intended for all ages and has no age restrictions.",
+      "privacy.section9.title": "9. Privacy Policy Changes",
+      "privacy.section9.text": "This privacy policy may be changed without notice. If there are significant changes, we will notify you on this page. Continued use of this app after changes constitutes acceptance of the updated privacy policy.",
+      "privacy.section10.title": "10. Contact",
+      "privacy.section10.text": "If you have any questions or comments regarding this privacy policy, please contact us through any of the following methods:",
+      "privacy.section10.item1": "<strong>App Store</strong>: From the app's review or support page",
+      "privacy.section10.item2": "<strong>TestFlight</strong>: From the feedback feature within the TestFlight app",
+      "privacy.section10.item3": "<strong><a href=\"https://github.com/natuki53/ClipRack-docs/issues\">GitHub Issues</a></strong>: From the GitHub repository's Issues page",
+      "privacy.skip": "Skip to content",
+      "privacy.page.title": "Privacy Policy — ClipRack",
+      "privacy.page.description": "ClipRack's privacy policy. Explains how clipboard data is handled, what information is collected, and how data is stored.",
     },
   };
 
@@ -319,7 +364,17 @@
     });
 
     // Title
-    document.title = lang === "ja" ? "ClipRack" : "ClipRack";
+    const titleEl = document.querySelector("title[data-i18n-title]");
+    if (titleEl) {
+      const titleKey = titleEl.getAttribute("data-i18n-title") || "";
+      const titleText = dict[titleKey] ?? I18N.en[titleKey] ?? base[titleKey];
+      if (typeof titleText === "string") {
+        document.title = titleText;
+      }
+    } else {
+      // Fallback for pages without data-i18n-title
+      document.title = lang === "ja" ? "ClipRack" : "ClipRack";
+    }
   }
 
   function wireLangToggle() {
