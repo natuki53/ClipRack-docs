@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ja" data-lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b1020" />
+
+    <title>プライバシーポリシー — ClipRack</title>
+    <meta
+      name="description"
+      content="ClipRackのプライバシーポリシー。クリップボードデータの取り扱い、収集する情報、データの保存方法について説明します。"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="プライバシーポリシー — ClipRack" />
+    <meta
+      property="og:description"
+      content="ClipRackのプライバシーポリシー。クリップボードデータの取り扱いについて説明します。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/icon.svg" />
+    <meta property="og:url" content="https://natuki53.github.io/ClipRack-docs/privacy.html" />
+
+    <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script defer src="./assets/app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#content">本文へスキップ</a>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="./">
+          <img class="brand__mark" src="./assets/icon.svg" alt="" width="28" height="28" />
+          <span class="brand__name">ClipRack</span>
+        </a>
+
+        <nav class="nav">
+          <a class="nav__link" href="./#features">機能</a>
+          <a class="nav__link" href="./#how">使い方</a>
+          <a class="nav__link" href="./#permissions">権限</a>
+          <a class="nav__link" href="./#download">入手</a>
+        </nav>
+
+        <div class="topbar__cta">
+          <div class="lang" role="group" aria-label="Language">
+            <button class="lang__btn is-active" type="button" data-set-lang="ja">日本語</button>
+            <button class="lang__btn" type="button" data-set-lang="en">English</button>
+          </div>
+          <a class="button button--primary" href="./#download">ダウンロード</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="section">
+        <div class="container">
+          <h1 class="section__title">プライバシーポリシー</h1>
+          <p class="section__lead">
+            最終更新日: <span data-year></span>年<span data-month></span>月<span data-day></span>日
+          </p>
+
+          <div style="max-width: 800px; margin-top: 32px;">
+            <p style="margin-bottom: 24px; color: var(--muted);">
+              ClipRack（以下「本アプリ」）は、ユーザーのプライバシーを尊重します。本プライバシーポリシーは、本アプリがどのように情報を収集、使用、保存するかについて説明します。
+            </p>
+
+            <div class="callout" style="margin-bottom: 32px;">
+              <div class="callout__title">重要なポイント</div>
+              <ul class="list">
+                <li>本アプリは、すべてのデータを<strong>ローカルデバイス上のみ</strong>に保存します</li>
+                <li>データを外部サーバーに送信することは<strong>一切ありません</strong></li>
+                <li>データを第三者と共有することは<strong>ありません</strong></li>
+                <li>分析ツールやトラッキングツールは使用していません</li>
+              </ul>
+            </div>
+
+            <h2 style="margin-top: 40px; margin-bottom: 16px; font-size: 22px; font-weight: 900;">1. 収集する情報</h2>
+            <p style="margin-bottom: 16px; color: var(--muted);">
+              本アプリは、クリップボード履歴機能を提供するために、以下の情報をローカルデバイス上に保存します：
+            </p>
+            <ul class="list" style="margin-bottom: 32px;">
+              <li><strong>クリップボードデータ</strong>：テキスト、画像、ファイルパス、URLなどのクリップボード内容</li>
+              <li><strong>アプリケーション設定</strong>：ショートカットキー、テーマ設定、その他のユーザー設定</li>
+              <li><strong>ピン留めされた項目</strong>：ユーザーがピン留めしたクリップボード項目</li>
+            </ul>
+
+            <h2 style="margin-top: 40px; margin-bottom: 16px; font-size: 22px; font-weight: 900;">2. データの保存場所</h2>
+            <p style="margin-bottom: 16px; color: var(--muted);">
+              すべてのデータは、macOSの標準的なアプリケーションデータディレクトリ（<code>~/Library/Application Support/ClipRack</code>）に保存されます。
+              これらのデータは、ユーザーのデバイス上にのみ存在し、外部に送信されることはありません。
+            </p>
+
+            <h2 style="margin-top: 40px; margin-bottom: 16px; font-size: 22px; font-weight: 900;">3. データの使用目的</h2>
+            <p style="margin-bottom: 16px; color: var(--muted);">
+              収集したデータは、以下の目的でのみ使用されます：
+            </p>
+            <ul class="list" style="margin-bottom: 32px;">
+              <li>クリップボード履歴の表示と管理</li>
+              <li>ユーザーが選択した項目の貼り付け機能の提供</li>
+              <li>アプリケーション設定の保存と復元</li>
+              <li>ピン留め機能の提供</li>
+            </ul>
+
+            <h2 style="margin-top: 40px; margin-bottom: 16px; font-size: 22px; font-weight: 900;">4. データの共有</h2>
+            <p style="margin-bottom: 32px; color: var(--muted);">
+              本アプリは、収集したデータを第三者と共有することはありません。データはユーザーのデバイス上にのみ保存され、外部サーバーに送信されることはありません。
+            </p>
+
+            <h2 style="margin-top: 40px; margin-bottom: 16px; font-size: 22px; font-weight: 900;">5. 必要な権限</h2>
+            <p style="margin-bottom: 16px; color: var(--muted);">
+              本アプリは、以下のmacOS権限を必要とします：
+            </p>
+            <ul class="list" style="margin-bottom: 32px;">
+              <li><strong>アクセシビリティ権限</strong>：選択したクリップボード項目を自動的に貼り付けるために必要です</li>
+              <li><strong>クリップボードアクセス</strong>：クリップボードの内容を読み取るために必要です（macOSの標準機能）</li>
+            </ul>
+            <p style="margin-bottom: 32px; color: var(--muted);">
+              これらの権限は、本アプリのコア機能を提供するためにのみ使用され、他の目的には使用されません。
+            </p>
+
+            <h2 style="margin-top: 40px; margin-bottom: 16px; font-size: 22px; font-weight: 900;">6. データの削除</h2>
+            <p style="margin-bottom: 32px; color: var(--muted);">
+              ユーザーは、アプリ内の「すべてクリア」機能を使用して、ピン留めされていないクリップボード履歴を削除できます。
+              アプリをアンインストールすると、すべてのデータがデバイスから削除されます。
+            </p>
+
+            <h2 style="margin-top: 40px; margin-bottom: 16px; font-size: 22px; font-weight: 900;">7. セキュリティ</h2>
+            <p style="margin-bottom: 32px; color: var(--muted);">
+              本アプリは、データをローカルデバイス上にのみ保存することで、ユーザーのプライバシーを保護します。
+              データは暗号化されていませんが、macOSの標準的なファイルシステムの保護機能により、他のアプリケーションからアクセスされることはありません。
+            </p>
+
+            <h2 style="margin-top: 40px; margin-bottom: 16px; font-size: 22px; font-weight: 900;">8. 年齢制限</h2>
+            <p style="margin-bottom: 32px; color: var(--muted);">
+              本アプリは全年齢を対象としており、年齢による制限はありません。
+            </p>
+
+            <h2 style="margin-top: 40px; margin-bottom: 16px; font-size: 22px; font-weight: 900;">9. プライバシーポリシーの変更</h2>
+            <p style="margin-bottom: 32px; color: var(--muted);">
+              本プライバシーポリシーは、予告なく変更される場合があります。重要な変更がある場合は、本ページで通知します。
+              変更後も本アプリを継続して使用することにより、変更後のプライバシーポリシーに同意したものとみなされます。
+            </p>
+
+            <h2 style="margin-top: 40px; margin-bottom: 16px; font-size: 22px; font-weight: 900;">10. お問い合わせ</h2>
+            <p style="margin-bottom: 32px; color: var(--muted);">
+              本プライバシーポリシーに関するご質問やご意見がございましたら、本サイト（<a href="https://natuki53.github.io/ClipRack-docs/" style="color: var(--accent);">https://natuki53.github.io/ClipRack-docs/</a>）を通じてお問い合わせください。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="footer__brand">
+            <img src="./assets/icon.svg" alt="" width="18" height="18" />
+            <span>ClipRack</span>
+          </div>
+          <div class="footer__meta">© <span data-year></span> ClipRack</div>
+        </div>
+        <div class="footer__right">
+          <a class="footer__link" href="./#content">トップへ</a>
+          <a class="footer__link" href="./privacy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true" hidden data-toast></div>
+  </body>
+</html>

@@ -126,6 +126,7 @@
       "dl.support.hint": "GitHub (Issues/Discussions)",
 
       "footer.top": "Back to top",
+      "footer.privacy": "Privacy Policy",
       "footer.github": "GitHub",
 
       "notfound.text": "Page not found. The link may be outdated.",
@@ -179,6 +180,16 @@
   function setYear() {
     const y = new Date().getFullYear();
     document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = String(y)));
+  }
+
+  function setDate() {
+    const d = new Date();
+    const y = d.getFullYear();
+    const m = d.getMonth() + 1;
+    const day = d.getDate();
+    document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = String(y)));
+    document.querySelectorAll("[data-month]").forEach((el) => (el.textContent = String(m)));
+    document.querySelectorAll("[data-day]").forEach((el) => (el.textContent = String(day)));
   }
 
   /**
@@ -325,6 +336,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     setYear();
+    setDate();
     applyRepoLinks();
     BASE_I18N = captureBaseI18nFromDom();
     applyI18n(getPreferredLang());
