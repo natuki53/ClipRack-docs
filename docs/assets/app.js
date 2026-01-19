@@ -118,9 +118,9 @@
 
       "dl.title": "Get it",
       "dl.lead": "Download from App Store or TestFlight to try it out.",
-      "dl.releases.title": "GitHub Releases",
-      "dl.releases.text": "Download the latest build",
-      "dl.releases.hint": "DMG/ZIP, etc. (If not available yet, it will be added later.)",
+      "dl.releases.title": "How to get it",
+      "dl.releases.text": "Available from App Store or TestFlight",
+      "dl.releases.hint": "Official release will be added later.",
       "dl.support.title": "Support / Feedback",
       "dl.support.text": "Bug reports and ideas welcome",
       "dl.support.hint": "GitHub (Issues/Discussions)",
