@@ -47,6 +47,7 @@
       "nav.features": "Features",
       "nav.how": "How it works",
       "nav.permissions": "Permissions",
+      "nav.support": "Support",
       "nav.download": "Get it",
 
       "cta.github": "GitHub",
@@ -110,8 +111,8 @@
       "perm.ok.1": "Open with the hotkey (⌘⇧V)",
       "perm.ok.2": "Choose with ↑↓, paste with Enter/click",
       "perm.ng.title": "When not allowed",
-      "perm.ng.1": "Shows instructions inside the app",
-      "perm.ng.2": "Follow the steps to grant permission",
+      "perm.ng.1": "The selected content is restored to the clipboard",
+      "perm.ng.2": "Press ⌘V manually to paste it",
       "perm.steps.title": "How to enable",
       "perm.steps.1": "<strong>System Settings</strong> → <strong>Privacy & Security</strong> → <strong>Accessibility</strong>",
       "perm.steps.2": "Allow <strong>ClipRack</strong>",
@@ -121,11 +122,14 @@
       "dl.releases.title": "How to get it",
       "dl.releases.text": "Available from App Store or TestFlight",
       "dl.releases.hint": "Official release will be added later.",
-      "dl.support.title": "Support / Feedback",
-      "dl.support.text": "Bug reports and ideas welcome",
-      "dl.support.hint": "GitHub (Issues/Discussions)",
+      "support.title": "Support",
+      "support.lead": "Find usage guidance, permissions help, troubleshooting, and contact options.",
+      "support.link.title": "ClipRack Support",
+      "support.link.text": "Frequently asked questions and contact options",
+      "support.link.hint": "Please review this page before reporting an issue",
 
       "footer.top": "Back to top",
+      "footer.support": "Support",
       "footer.privacy": "Privacy Policy",
       "footer.github": "GitHub",
 
@@ -133,49 +137,73 @@
       "notfound.back": "Back to home",
 
       "privacy.title": "Privacy Policy",
-      "privacy.lead": "Last updated: ",
-      "privacy.intro": "ClipRack (hereinafter referred to as \"this app\") respects user privacy. This privacy policy explains how this app collects, uses, and stores information.",
+      "privacy.updated": "Last updated: August 12, 2026",
+      "privacy.intro": "ClipRack (the \"App\") provides clipboard history on your Mac. This policy explains the information processed and stored on-device, its purposes, retention and deletion, and the permissions the App uses.",
       "privacy.important.title": "Key Points",
       "privacy.important.1": "This app stores all data <strong>only on your local device</strong>",
       "privacy.important.2": "Data is <strong>never</strong> sent to external servers",
       "privacy.important.3": "Data is <strong>never</strong> shared with third parties",
       "privacy.important.4": "No analytics or tracking tools are used",
-      "privacy.section1.title": "1. Information Collected",
-      "privacy.section1.text": "To provide clipboard history functionality, this app stores the following information on your local device:",
-      "privacy.section1.item1": "<strong>Clipboard Data</strong>: Clipboard contents such as text, images, file paths, URLs, etc.",
-      "privacy.section1.item2": "<strong>Application Settings</strong>: Shortcut keys, theme settings, and other user preferences",
-      "privacy.section1.item3": "<strong>Pinned Items</strong>: Clipboard items that users have pinned",
+      "privacy.section1.title": "1. Information Processed and Stored On-Device",
+      "privacy.section1.text": "To provide its features, the App processes or stores the following information on your Mac. None of it is sent to the developer's servers:",
+      "privacy.section1.item1": "<strong>Clipboard history</strong>: Text, images, file references and paths, URLs, and PDFs",
+      "privacy.section1.item2": "<strong>App settings</strong>: Shortcut, appearance, history limit, auto-paste, launch-at-login, and related preferences",
+      "privacy.section1.item3": "<strong>User-created data</strong>: Pinned items and text templates",
+      "privacy.section1.item4": "<strong>Folder access information</strong>: A security-scoped bookmark for a screenshot folder the user optionally selects",
       "privacy.section2.title": "2. Data Storage Location",
-      "privacy.section2.text": "All data is stored in macOS's standard application data directory (<code>~/Library/Application Support/ClipRack</code>). This data exists only on the user's device and is never sent externally.",
+      "privacy.section2.text": "History, local image and PDF copies, templates, and settings are stored in the sandbox container assigned to the App by macOS. The exact location varies by macOS version and distribution method. The App does not sync this data through iCloud or back it up to an external server.",
       "privacy.section3.title": "3. Purpose of Data Use",
-      "privacy.section3.text": "Collected data is used only for the following purposes:",
+      "privacy.section3.text": "On-device data is used only for the following purposes:",
       "privacy.section3.item1": "Display and management of clipboard history",
       "privacy.section3.item2": "Providing paste functionality for user-selected items",
       "privacy.section3.item3": "Saving and restoring application settings",
       "privacy.section3.item4": "Providing pin functionality",
+      "privacy.section3.item5": "Providing text templates and optional screenshot import",
       "privacy.section4.title": "4. Data Sharing",
-      "privacy.section4.text": "This app does not share collected data with third parties. Data is stored only on the user's device and is never sent to external servers.",
+      "privacy.section4.text": "The App does not transmit or share clipboard history, settings, or other on-device data with the developer or third parties. It uses no advertising, analytics, tracking, or crash-reporting SDKs. Its App Store Connect privacy declaration is \"Data Not Collected.\"",
       "privacy.section5.title": "5. Required Permissions",
-      "privacy.section5.text": "This app requires the following macOS permissions:",
-      "privacy.section5.item1": "<strong>Accessibility Permission</strong>: Required to automatically paste selected clipboard items",
-      "privacy.section5.item2": "<strong>Clipboard Access</strong>: Required to read clipboard contents (standard macOS feature)",
-      "privacy.section5.note": "These permissions are used only to provide the core functionality of this app and are not used for any other purpose.",
+      "privacy.section5.text": "The App uses the following features and permissions. Accessibility permission and folder selection are optional:",
+      "privacy.section5.item1": "<strong>Accessibility permission (optional)</strong>: Sends a ⌘V keyboard event to auto-paste the selected item into the previously active app. Without permission, the item is still restored to the clipboard and can be pasted manually with ⌘V",
+      "privacy.section5.item2": "<strong>Clipboard access</strong>: Stores supported copied formats in local history and restores a selected item",
+      "privacy.section5.item3": "<strong>User-selected folder (optional)</strong>: Monitors only the folder selected by the user when screenshot import is enabled",
+      "privacy.section5.note": "Permissions are used only to provide these features. Accessibility permission can be revoked at any time in System Settings > Privacy & Security > Accessibility. Turning off screenshot import in Preferences releases the saved folder access.",
       "privacy.section6.title": "6. Data Deletion",
-      "privacy.section6.text": "Users can delete non-pinned clipboard history using the \"Clear All\" feature within the app. Uninstalling the app will delete all data from the device.",
+      "privacy.section6.text": "\"Clear All\" deletes unpinned history. Individual history items and templates can be deleted in the App; pinned items can be unpinned and then deleted. When the configured history limit (up to 100 items) is exceeded, the oldest unpinned items are deleted first. Removing the app bundle may leave its sandbox container depending on macOS state. To remove all data, quit ClipRack and delete the container/app data for bundle identifier <code>com.mu-natuki.cliprack</code> using Finder or macOS storage-management tools. Contact support if you need help.",
       "privacy.section7.title": "7. Security",
-      "privacy.section7.text": "This app protects user privacy by storing data only on the local device. While data is not encrypted, macOS's standard file system protection prevents access by other applications.",
+      "privacy.section7.text": "The App enables App Sandbox and limits folder access to locations explicitly selected by the user. It does not apply its own encryption to on-device data. Data is protected by macOS file access controls, the app container, and device security features.",
       "privacy.section8.title": "8. Age Restrictions",
       "privacy.section8.text": "This app is intended for all ages and has no age restrictions.",
       "privacy.section9.title": "9. Privacy Policy Changes",
-      "privacy.section9.text": "This privacy policy may be changed without notice. If there are significant changes, we will notify you on this page. Continued use of this app after changes constitutes acceptance of the updated privacy policy.",
+      "privacy.section9.text": "We may update this policy when the App's features or data handling change. Material changes will be described on this page and the last-updated date above will be revised.",
       "privacy.section10.title": "10. Contact",
-      "privacy.section10.text": "If you have any questions or comments regarding this privacy policy, please contact us through any of the following methods:",
-      "privacy.section10.item1": "<strong>App Store</strong>: From the app's review or support page",
-      "privacy.section10.item2": "<strong>TestFlight</strong>: From the feedback feature within the TestFlight app",
-      "privacy.section10.item3": "<strong><a href=\"https://github.com/natuki53/ClipRack-docs/issues\">GitHub Issues</a></strong>: From the GitHub repository's Issues page",
+      "privacy.section10.text": "For questions about this policy or data deletion, use the support page. Do not post clipboard contents or personal information in a public issue.",
+      "privacy.section10.item1": "<strong><a href=\"./support.html\">ClipRack Support</a></strong>: FAQs and contact options",
+      "privacy.section10.item2": "<strong><a href=\"https://github.com/natuki53/ClipRack/issues\">GitHub Issues</a></strong>: Bug reports and inquiries",
       "privacy.skip": "Skip to content",
       "privacy.page.title": "Privacy Policy — ClipRack",
-      "privacy.page.description": "ClipRack's privacy policy. Explains how clipboard data is handled, what information is collected, and how data is stored.",
+      "privacy.page.description": "ClipRack's privacy policy. Explains on-device clipboard processing, storage, deletion, and permissions.",
+
+      "support.page.title": "Support — ClipRack",
+      "support.skip": "Skip to content",
+      "support.title": "ClipRack Support",
+      "support.lead": "Help with setup, permissions, and common issues.",
+      "support.quick.title": "Quick Start",
+      "support.quick.1": "Copy text, an image, a file, a URL, or a PDF in another app.",
+      "support.quick.2": "Press <strong>⌘⇧V</strong> to open clipboard history.",
+      "support.quick.3": "Choose an item with the arrow keys or pointer, then press Enter or click it.",
+      "support.faq.title": "Frequently Asked Questions",
+      "support.faq.dock.title": "ClipRack is not in the Dock",
+      "support.faq.dock.text": "ClipRack is intentionally a menu bar app. Use the menu bar icon or ⌘⇧V. If the icon is hidden, open Preferences from the history panel and enable the menu bar icon.",
+      "support.faq.access.title": "Auto-paste does not work",
+      "support.faq.access.text": "Grant ClipRack access in System Settings > Privacy & Security > Accessibility. Without this permission, ClipRack still restores the selected item to the clipboard; press ⌘V manually.",
+      "support.faq.shot.title": "Screenshots are not added",
+      "support.faq.shot.text": "Open Preferences > Advanced, enable screenshot import, and select the actual macOS screenshot destination folder. ClipRack monitors only the folder you select.",
+      "support.faq.secret.title": "Sensitive clipboard items",
+      "support.faq.secret.text": "ClipRack skips items marked concealed, transient, auto-generated, or sensitive by password managers and other apps. Avoid copying secrets from apps that do not provide these markers.",
+      "support.contact.title": "Contact and Bug Reports",
+      "support.contact.text": "Open a GitHub Issue with your macOS version, ClipRack version, steps to reproduce, and expected/actual behavior. Do not include clipboard contents, passwords, personal information, or private files because Issues are public.",
+      "support.contact.button": "Open GitHub Issues",
+      "support.privacy": "Read the Privacy Policy",
     },
   };
 
@@ -225,16 +253,6 @@
   function setYear() {
     const y = new Date().getFullYear();
     document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = String(y)));
-  }
-
-  function setDate() {
-    const d = new Date();
-    const y = d.getFullYear();
-    const m = d.getMonth() + 1;
-    const day = d.getDate();
-    document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = String(y)));
-    document.querySelectorAll("[data-month]").forEach((el) => (el.textContent = String(m)));
-    document.querySelectorAll("[data-day]").forEach((el) => (el.textContent = String(day)));
   }
 
   /**
@@ -391,7 +409,6 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     setYear();
-    setDate();
     applyRepoLinks();
     BASE_I18N = captureBaseI18nFromDom();
     applyI18n(getPreferredLang());
@@ -401,4 +418,3 @@
     parallaxPanel();
   });
 })();
-
